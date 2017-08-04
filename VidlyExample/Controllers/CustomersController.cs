@@ -20,6 +20,8 @@ namespace VidlyExample.Controllers
             _context.Dispose();
         }
 
+
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -65,7 +67,10 @@ namespace VidlyExample.Controllers
 
         public ViewResult Index()
         {
-            return View();
+
+            if (User.IsInRole(RoleName.CanManageMovie))
+                return View("List");
+            return View("ReadOnlyList");
         }
 
         public ActionResult Details(int id)
@@ -77,6 +82,7 @@ namespace VidlyExample.Controllers
             return View(customer);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
