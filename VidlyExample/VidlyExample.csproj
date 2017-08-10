@@ -214,6 +214,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
+    <Compile Include="Controllers\Api\NewRentalsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -222,6 +223,7 @@
     <Compile Include="DTO\GenreDTO.cs" />
     <Compile Include="DTO\MembershipTypeDTO.cs" />
     <Compile Include="DTO\MovieDTO.cs" />
+    <Compile Include="DTO\NewRentalDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -297,6 +299,14 @@
     <Compile Include="Migrations\201708041545035_ApplicationUserPhoneNumberRequired.Designer.cs">
       <DependentUpon>201708041545035_ApplicationUserPhoneNumberRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708091531164_Rentalmodeladded.cs" />
+    <Compile Include="Migrations\201708091531164_Rentalmodeladded.Designer.cs">
+      <DependentUpon>201708091531164_Rentalmodeladded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708091534297_NewRentalDTO.cs" />
+    <Compile Include="Migrations\201708091534297_NewRentalDTO.Designer.cs">
+      <DependentUpon>201708091534297_NewRentalDTO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
@@ -307,6 +317,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -640,6 +651,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708041545035_ApplicationUserPhoneNumberRequired.resx">
       <DependentUpon>201708041545035_ApplicationUserPhoneNumberRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091531164_Rentalmodeladded.resx">
+      <DependentUpon>201708091531164_Rentalmodeladded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708091534297_NewRentalDTO.resx">
+      <DependentUpon>201708091534297_NewRentalDTO.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
