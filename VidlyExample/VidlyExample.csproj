@@ -307,6 +307,10 @@
     <Compile Include="Migrations\201708091534297_NewRentalDTO.Designer.cs">
       <DependentUpon>201708091534297_NewRentalDTO.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708111526237_MovieModelUpdateIncludeNumberAvailable.cs" />
+    <Compile Include="Migrations\201708111526237_MovieModelUpdateIncludeNumberAvailable.Designer.cs">
+      <DependentUpon>201708111526237_MovieModelUpdateIncludeNumberAvailable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
@@ -657,6 +661,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708091534297_NewRentalDTO.resx">
       <DependentUpon>201708091534297_NewRentalDTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708111526237_MovieModelUpdateIncludeNumberAvailable.resx">
+      <DependentUpon>201708111526237_MovieModelUpdateIncludeNumberAvailable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
