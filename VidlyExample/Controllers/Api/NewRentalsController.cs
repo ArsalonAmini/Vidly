@@ -18,27 +18,12 @@ namespace VidlyExample.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-
-        //[HttpPost]
-        //public IHttpaction CreateRental (NewRentalDTO newRental)
-        //{
-        //    movie = _context.Movies.SingleOrDefault(m=>m.Name),
-        //    customer = _context.Customers.FirstOrDefault(c.id == c.customers)
-
-        //    rental = new Rental
-        //    {
-        //        Movie = Rental.movie,
-        //        Customer = Rental.customer
-        //    }
-
-        //}
-
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDTO newRental)
         {
 
             var customer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
-            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id));
+            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
             
             foreach(var movie in movies)
             {
