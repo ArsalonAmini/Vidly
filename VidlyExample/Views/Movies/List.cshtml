@@ -21,6 +21,9 @@
         </tbody>
     </table>
 
+<button onclick="myFunction()">Click me</button>
+<p id="demo"></p>
+
 @section Scripts
 {
     <script>
@@ -64,5 +67,9 @@
             }
         });
         });
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
     </script>
 }  
