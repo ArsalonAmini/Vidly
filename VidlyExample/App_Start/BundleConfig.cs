@@ -16,7 +16,9 @@ namespace VidlyExample
                       "~/Scripts/datatables/jquery.datatables.js",
                       "~/Scripts/datatables/datatables.bootstrap.js",
                       "~/scripts/typeahead.jquery.js",
-                      "~/scripts/typeahead.bundle.js"));
+                      "~/scripts/typeahead.bundle.js",
+                      "~/scripts/toastr.js"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -30,6 +32,7 @@ namespace VidlyExample
                       "~/Content/bootstrap-spacelab.css",
                       "~/Content/datatables/css/datatables.boostrap.css",
                       "~/Content/typeahead.css",
+                      "~/Content/toastr.css",
                       "~/Content/site.css"));
         }
     }

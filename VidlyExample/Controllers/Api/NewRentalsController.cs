@@ -22,15 +22,18 @@ namespace VidlyExample.Controllers.Api
         public IHttpActionResult CreateNewRentals(NewRentalDTO newRental)
         {
 
-            var customer = _context.Customers.Single(c => c.Id == newRental.CustomerId);
-            var movies = _context.Movies.Where(m => newRental.MovieIds.Contains(m.Id)).ToList();
+            var customer = _context.Customers.Single(
+                c => c.Id == newRental.CustomerId);
+
+            var movies = _context.Movies.Where(
+                m => newRental.MovieIds.Contains(m.Id)).ToList();
             
             foreach(var movie in movies)
             {
-                if (movie.NumberAvailable == 0)
+                if (movie.StockNumber == 0)
                     return BadRequest("Movie is not available");
 
-                movie.NumberAvailable--;
+                movie.StockNumber--;
 
                 var rental = new Rental
                 {

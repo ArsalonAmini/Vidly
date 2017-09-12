@@ -35,10 +35,6 @@ namespace VidlyExample.Controllers.Api
                 .ToList()
                 .Select(Mapper.Map<Movie, MovieDTO>);
 
-            //return _context.Movies
-            //    .Include(m => m.Genre)
-            //    .ToList()
-            //    .Select(Mapper.Map<Movie, MovieDTO>);
         }
 
         //Get api/movies/1
