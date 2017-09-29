@@ -7,7 +7,7 @@
 <h2>New Rental Form</h2>
 
 
-<form id="newRental"> 
+<form id="newRental">
     <div class="form-group">
         <label>Customer</label>
         <div class="tt-container">
@@ -27,13 +27,14 @@
             <ul id="movies" class="list-group"></ul>
         </div>
     </div>
-    
+
     <button class="btn btn-primary">Submit</button>
 </form>
 
 @section Scripts
 {
-    <script> 
+    <script>
+
         $(document).ready(function () {
 
             var vm = {
@@ -88,12 +89,18 @@
                 e.preventDefault();
 
                 $.ajax({
-                    url: "/api/NewRentals",
-                    method: "post",
+                    url: "/api/newRentals",
+                    method: "Post",
                     data: vm
                 })
                     .done(function () {
                         toastr.success("Rental successfully recorded");
+                        $("#customer").typeahead("val", "");
+                        $("#movie").typeahead("val", "");
+                        $("#movies").empty();
+
+                        vm = { movieIds: [] };
+
                     })
                     .fail(function () {
                         toastr.error("Something Unexpected came up")
@@ -101,9 +108,18 @@
                     });
             });
         });
-       
+
     </script>
 }
+
+
+
+
+
+
+
+
+
 
 
 
